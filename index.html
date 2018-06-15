@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        docker host :
+        <input ng-model="dockerhost">
+        <button ng-click="scanDockerHost()">SCAN</button>
+        <p>Running Containers : </p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>State</th>
+                    <th>Created Time</th>
+                    <th>Status</th>
+                    <th>Ports</th>
+                    <th>IPAddress</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="container in containers">
+                    <td>
+                        <ul>
+                            <li ng-repeat="name in container.Names">
+                                {{name}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>{{container.State}}</td>
+                    <td>{{container.Created}}</td>
+                    <td>{{container.Status}}</td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="port in container.Ports">
+                                {{port}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>{{container.NetworkSettings.Networks.bridge.IPAddress}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="tabs.html">Home</a>
+    </div>
+    <script src="docker_controller.js">
+    </script>
+</body>
+</html>
