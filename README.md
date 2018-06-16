@@ -18,3 +18,8 @@ Executable is available in Release-builds Directory.
 # How to run
 electron docker_utility.js<br>
 
+# screen shots
+Connect and Evaluate<br>
+![Alt text](/ScreenShots/screen2.JPG?raw=true "Connect") <br>
+Generate PDF Report<br>
+![Alt text](/ScreenShots/screen3.JPG?raw=true "Connect") <br>
