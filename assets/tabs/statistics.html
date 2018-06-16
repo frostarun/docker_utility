@@ -4,15 +4,22 @@
         <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">DOCKER STATISTICS</label>
         <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description" aria-hidden="false">
             docker host :
-            <input ng-model="dockerhost" type="text">&nbsp;&nbsp;
-            <button ng-click="scanDockerHost()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Scan Docker Enviroment</button>
-            <br>
-            <br>
+            <input ng-bind="dockerhost" type="text" id='hostIP'>&nbsp;&nbsp;
+            <button ng-click="scanDockerHost()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Scan Docker Enviroment</button>&nbsp;&nbsp;
             <div ng-show="statisticsTable">
-                <div ng-view ng-include src="'assets/snippets/docker_containers.html'"></div>
                 <br style="clear: both;" />
-                <div ng-view ng-include src="'assets/snippets/docker_images.html'"></div>
+                <button id="cmd" style="border:none;box-shadow: 5px 5px 5px black" class="scan" onclick="printJS({ printable: 'printJS-form', type: 'html', header: 'Docker Statistics Report'})">Generate Report PDF</button>
+                <br style="clear: both;" />
+                <br style="clear: both;" />
+                <div id="printJS-form">
+                    <div ng-view ng-include src="'assets/snippets/docker_info.html'"></div>
+                    <br style="clear: both;" />
+                    <div ng-view ng-include src="'assets/snippets/docker_containers.html'"></div>
+                    <br style="clear: both;" />
+                    <div ng-view ng-include src="'assets/snippets/docker_images.html'"></div>
+                </div>
             </div>
+            <div id="editor"></div>
         </div>
     </li>
 </div>

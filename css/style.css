@@ -35,7 +35,7 @@ h1 span {
   float: none;
   list-style: none;
   position: relative;
-  margin: 80px 0 0 10px;
+  margin: 20px 5px 10px 5px;
   text-align: left;
 }
 .tabs li {
@@ -116,10 +116,6 @@ button.scan {
   background-color: #522764;
 }
 
-/* button.scan button:hover {
-  background-color: #522764;
-} */
-
 p.link a:hover {
   background-color: #522764;
 }
@@ -130,16 +126,6 @@ input[type=text] {
   padding: 5px;
   border-collapse: collapse;
 }
-
- /* th {
-  padding: 8px;
-  text-align: center;
-} 
-
-th, td {
-  border-bottom: 1px solid #ddd;
-  padding: 3px;
-} */
 
 th {
   background-color: #522764;

@@ -1,6 +1,7 @@
 {
   "name": "docker_utility",
   "productName": "Docker Utility",
+  "author": "Arun Kumar GR | frostarun@gmail.com",
   "version": "0.1.0",
   "main": "docker_utility.js",
   "devDependencies": {

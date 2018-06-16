@@ -6,7 +6,7 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
+                <!-- <th>Id</th> -->
                 <th>RepoTags</th>
                 <th>Size</th>
                 <th>VirtualSize</th>
@@ -14,14 +14,12 @@
         </thead>
         <tbody>
             <tr ng-repeat="image in images">
-                <td>{{image.Id}}</td>
+                <!-- <td>{{image.Id}}</td> -->
                 <td>
-                    <ul>
-                        <li ng-repeat="repotag in image.RepoTags">
+                        <span ng-repeat="repotag in image.RepoTags">
                             {{repotag}}
                             <span ng-if="$index != image.RepoTags.length - 1">|</span>
-                        </li>
-                    </ul>
+                        </span>
                 </td>
                 <td>{{image.Size}}</td>
                 <td>{{image.VirtualSize}}</td>
