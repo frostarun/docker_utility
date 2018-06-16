@@ -3,6 +3,7 @@ This is a simple tool used to connect <b>Linux docker host</b> with engine API a
 
 # Pre-Requisites 
 Node JS<br>
+Docker Engine should be enabled in docker host [https://github.com/frostarun/Docker-deamon]
 
 # How to build
 Open Command Prompt in root directory of Master and Run the following Commands :<br>
