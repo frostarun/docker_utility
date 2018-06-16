@@ -1,9 +1,24 @@
 <div>
-    <li>
-        <input type="radio" name="tabs" id="tab2" />
-        <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">DOCKER MANAGER</label>
-        <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
-            <p>Working Hard ! will be coming soon !</p>
+  <li>
+    <input type="radio" name="tabs" id="tab2" />
+    <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">DOCKER MANAGER</label>
+    <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
+      <div class="manager-tab">
+        <button class="manager-tablinks" onclick="openCity(event, 'mono-options')" ng-click="handleOption()">Mono Options</button>
+        <button class="manager-tablinks" onclick="openCity(event, 'bulk-options')" ng-click="handleOption()">Bulk Options</button>
+        <button class="manager-tablinks" onclick="openCity(event, 'swarm-options')" ng-click="handleOption()">Swarm Options</button>
+      </div>
+      <div ng-show="optionTable">
+        <div id="mono-options" class="manager-tabcontent">
+          <div ng-view ng-include src="'assets/snippets/docker_mono_options.html'"></div>
         </div>
-    </li>
+        <div id="bulk-options" class="manager-tabcontent">
+          <div ng-view ng-include src="'assets/snippets/docker_bulk_options.html'"></div>
+        </div>
+        <div id="swarm-options" class="manager-tabcontent">
+          <div ng-view ng-include src="'assets/snippets/docker_swarm_options.html'"></div>
+        </div>
+      </div>
+    </div>
+  </li>
 </div>
