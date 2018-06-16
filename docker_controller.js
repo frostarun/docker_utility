@@ -1,5 +1,5 @@
- var myApp = angular.module('myApp', ['angular-loading-bar']);
- myApp.controller('myCtrl', function ($scope, $http, cfpLoadingBar) {
+ var myApp = angular.module('dockerUtility', ['angular-loading-bar']);
+ myApp.controller('mainCtrl', function ($scope, $http, cfpLoadingBar) {
 
 
      $scope.scanDockerHost = function () {
