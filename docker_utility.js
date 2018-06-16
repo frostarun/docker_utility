@@ -2,18 +2,20 @@ const {
     app,
     BrowserWindow
 } = require('electron')
+const electron = require('electron');
 const url = require('url')
 const path = require('path')
 
 let win
 
 function createWindow() {
+    let screenSize = electron.screen.getPrimaryDisplay().size;
     win = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: screenSize.width,
+        height: screenSize.height
     })
     win.loadURL(url.format({
-        pathname: path.join(__dirname, 'tabs.html'),
+        pathname: path.join(__dirname, 'main.html'),
         protocol: 'file:',
         slashes: true
     }))

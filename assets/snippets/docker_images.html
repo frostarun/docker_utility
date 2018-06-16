@@ -1,0 +1,31 @@
+<div>
+    <u>
+        <p>Docker Images : </p>
+    </u>
+    <br style="clear: both;" />
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>RepoTags</th>
+                <th>Size</th>
+                <th>VirtualSize</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="image in images">
+                <td>{{image.Id}}</td>
+                <td>
+                    <ul>
+                        <li ng-repeat="repotag in image.RepoTags">
+                            {{repotag}}
+                            <span ng-if="$index != image.RepoTags.length - 1">|</span>
+                        </li>
+                    </ul>
+                </td>
+                <td>{{image.Size}}</td>
+                <td>{{image.VirtualSize}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+<div>
+    <u>
+        <p>Running Containers : </p>
+    </u>
+    <br style="clear: both;" />
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>State</th>
+                <th>Status</th>
+                <th>Ports</th>
+                <th>IPAddress</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="container in containers">
+                <td>
+                    <ul>
+                        <li ng-repeat="name in container.Names">
+                            {{name}}
+                        </li>
+                    </ul>
+                </td>
+                <td>{{container.Image}}</td>
+                <td>{{container.State}}</td>
+                <td>{{container.Status}}</td>
+                <td>
+                    <ul>
+                        <li ng-repeat="port in container.Ports">
+                            {{port.Type}}:{{port.PrivatePort}}
+                            <span ng-if="$index != container.Ports.length - 1">|</span>
+                        </li>
+                    </ul>
+                </td>
+                <td>{{container.NetworkSettings.Networks.bridge.IPAddress}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

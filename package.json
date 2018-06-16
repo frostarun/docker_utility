@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "main": "docker_utility.js",
   "devDependencies": {
+    "angular-loading-bar": "^0.9.0",
     "electron": "^2.0.2",
     "electron-packager": "^12.1.0"
   },

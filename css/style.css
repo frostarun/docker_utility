@@ -11,6 +11,7 @@ body {
   padding: 20px;
   text-align: left;
   font-family: Lato;
+  /* font-family: Arial, Helvetica, sans-serif; */
   color: #fff;
   background: #280536;
 }
@@ -30,7 +31,7 @@ h1 span {
 }
 
 .tabs {
-  width: 650px;
+  /* width: 650px; */
   float: none;
   list-style: none;
   position: relative;
@@ -69,7 +70,7 @@ h1 span {
   z-index: 2;
   display: none;
   overflow: hidden;
-  /* width: 100%; */
+  width: 100%;
   font-size: 17px;
   line-height: 25px;
   padding: 25px;
@@ -89,7 +90,7 @@ h1 span {
 
 p.link {
   clear: both;
-  margin: 20px 0 0 15px;
+  margin: 20px 0 0 10px;
 }
 
 p.link a {
@@ -123,6 +124,12 @@ p.link a:hover {
   background-color: #522764;
 }
 
+input[type=text] {
+  background-color: #522764;
+  color: white;
+  padding: 5px;
+  border-collapse: collapse;
+}
 
  /* th {
   padding: 8px;
@@ -149,5 +156,6 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+
 
 
