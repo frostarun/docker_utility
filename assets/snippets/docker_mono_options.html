@@ -1,4 +1,23 @@
-<!-- <div id="London" class="manager-tabcontent"> -->
-    <h3>Single Delete and Create Operations</h3>
-    <p>Working Hard ! will be coming soon !</p>
-<!-- </div> -->
+<div>
+    <B>Container ID :</B>
+    <input ng-bind="containerid" type="text" style="border: none" id='containerID'>&nbsp;&nbsp;
+    <div ng-show="errorMessageBox">{{errorContent}}</div>
+    <br style="clear: both;" />
+    <br style="clear: both;" />
+    <button ng-click="inspectDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Inspect</button>&nbsp;&nbsp;
+    <button ng-click="startDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Start</button>&nbsp;&nbsp;
+    <button ng-click="stopDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Stop</button>&nbsp;&nbsp;
+    <button ng-click="pauseDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Pause</button>&nbsp;&nbsp;
+    <button ng-click="unpauseDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">UnPause</button>&nbsp;&nbsp;
+    <button ng-click="killDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Kill</button>&nbsp;&nbsp;
+    <button ng-click="deleteDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Delete</button>&nbsp;&nbsp;
+    <br style="clear: both;" />
+    <br style="clear: both;" />
+    <div ng-show="inspectContainerTable">
+        <button id="cmd" style="border:none;box-shadow: 5px 5px 5px black" class="scan" onclick="printJS({ printable: 'container-form', type: 'html', header: 'Container Report'})">Generate Report PDF</button>
+        <div id="container-form">
+            <br style="clear: both;" />
+            <div ng-view ng-include src="'assets/snippets/docker_mono_options_inspectTable.html'"></div>
+        </div>
+    </div>
+</div>

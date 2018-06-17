@@ -6,6 +6,7 @@
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Image</th>
                 <th>State</th>
@@ -16,6 +17,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="container in containers">
+                <td>{{container.Id.substr(0,12)}}</td>
                 <td>
                     <ul>
                         <li ng-repeat="name in container.Names">
@@ -27,10 +29,10 @@
                 <td>{{container.State}}</td>
                 <td>{{container.Status}}</td>
                 <td>
-                        <span ng-repeat="port in container.Ports">
-                            {{port.Type}}:{{port.PrivatePort}}
-                            <span ng-if="$index != container.Ports.length - 1">|</span>
-                        </span>
+                    <span ng-repeat="port in container.Ports">
+                        {{port.Type}}:{{port.PrivatePort}}
+                        <span ng-if="$index != container.Ports.length - 1">|</span>
+                    </span>
                 </td>
                 <td>{{container.NetworkSettings.Networks.bridge.IPAddress}}</td>
             </tr>

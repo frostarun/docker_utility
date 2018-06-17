@@ -21,9 +21,12 @@
 <body>
     <h2>Docker-SageMode-Utility</h2>
     <!-- <span>By Arun Kumar</span> -->
-    <span style="background-color: #522764">Scan,Manipulate Docker Environments</span><br><br>
+    <span style="background-color: #522764">Scan,Manipulate Docker Environments</span>
+    <br>
+    <br>
     <B>Docker Host :</B>
-    <input ng-bind="dockerhost" type="text" id='hostIP' style="border: none">&nbsp;&nbsp;<br>
+    <input ng-bind="dockerhost" type="text" id='hostIP' style="border: none">&nbsp;&nbsp;
+    <br>
     <ul class="tabs" role="tablist">
         <div ng-app="dockerUtility" ng-controller="mainCtrl">
             <div ng-view ng-include src="'assets/tabs/statistics.html'"></div>

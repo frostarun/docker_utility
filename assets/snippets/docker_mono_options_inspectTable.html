@@ -1,0 +1,133 @@
+<div>
+    <table class="key-value-table">
+        <tbody>
+            <tr>
+                <th class="width-20">Name</th>
+                <td>{{inspectContainer.Name}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Path</th>
+                <td>{{inspectContainer.Path}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Args</th>
+                <td>
+                    <span ng-repeat="arg in inspectContainer.Args">
+                        {{arg}}
+                        <span ng-if="$index != inspectContainer.Args.length - 1"> | </span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="width-20">State</th>
+                <td>status:{{inspectContainer.State.Status}} | Pid:{{inspectContainer.State.Pid}} | StartedAt:{{inspectContainer.State.StartedAt}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Env</th>
+                <td>
+                    <span ng-repeat="envs in inspectContainer.Config.Env">
+                        {{envs}}
+                        <span ng-if="$index != inspectContainer.Config.Env.length - 1"> | </span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="width-20">Cmd</th>
+                <td>
+                    <span ng-repeat="cmds in inspectContainer.Config.Cmd">
+                        {{cmds}}
+                        <span ng-if="$index != inspectContainer.Config.Cmd.length - 1"> | </span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="width-20">Image</th>
+                <td>{{inspectContainer.Config.Image}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Gateway</th>
+                <td>{{inspectContainer.NetworkSettings.Gateway}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">IPAddress</th>
+                <td>{{inspectContainer.NetworkSettings.IPAddress}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">MacAddress</th>
+                <td>{{inspectContainer.NetworkSettings.MacAddress}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">SandboxID</th>
+                <td>{{inspectContainer.NetworkSettings.SandboxID}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">IPPrefixLen</th>
+                <td>{{inspectContainer.NetworkSettings.IPPrefixLen}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">LinkLocalIPv6Address</th>
+                <td>{{inspectContainer.NetworkSettings.LinkLocalIPv6Address}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Volumes</th>
+                <td>{{inspectContainer.Config.Volumes}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">RestartCount</th>
+                <td>{{inspectContainer.RestartCount}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Platform</th>
+                <td>{{inspectContainer.Platform}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">NetworkMode</th>
+                <td>{{inspectContainer.HostConfig.NetworkMode}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">ShmSize</th>
+                <td>{{inspectContainer.HostConfig.ShmSize}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">PublishAllPorts</th>
+                <td>{{inspectContainer.HostConfig.PublishAllPorts}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuShares</th>
+                <td>{{inspectContainer.HostConfig.CpuShares}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">Memory</th>
+                <td>{{inspectContainer.HostConfig.Memory}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuPeriod</th>
+                <td>{{inspectContainer.HostConfig.CpuPeriod}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuQuota</th>
+                <td>{{inspectContainer.HostConfig.CpuQuota}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuRealtimePeriod</th>
+                <td>{{inspectContainer.HostConfig.CpuRealtimePeriod}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuRealtimeRuntime</th>
+                <td>{{inspectContainer.HostConfig.CpuRealtimeRuntime}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">DiskQuota</th>
+                <td>{{inspectContainer.HostConfig.DiskQuota}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">KernelMemory</th>
+                <td>{{inspectContainer.HostConfig.KernelMemory}}</td>
+            </tr>
+            <tr>
+                <th class="width-20">CpuCount</th>
+                <td>{{inspectContainer.HostConfig.CpuCount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
