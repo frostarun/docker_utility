@@ -1,6 +1,6 @@
 myApp.commonsController = function ($scope, $http, cfpLoadingBar, $timeout) {
 
-    $scope.containerresultPeekaPoo = function () {
+    $scope.containerresultPeekaBoo = function () {
         if ($scope.inspectContainerTable == true) {
             $scope.inspectContainerTable = false;
         } else if ($scope.inspectContainerTable == false) {
@@ -9,7 +9,7 @@ myApp.commonsController = function ($scope, $http, cfpLoadingBar, $timeout) {
 
     };
 
-    $scope.imageresultPeekaPoo = function () {
+    $scope.imageresultPeekaBoo = function () {
         if ($scope.imageSearchTable == true) {
             $scope.imageSearchTable = false;
         } else if ($scope.imageSearchTable == false) {
