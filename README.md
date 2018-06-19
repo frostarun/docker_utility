@@ -1,5 +1,12 @@
 # docker_sagemode_utility
-This is a simple tool used to connect <b>Linux docker host</b> with engine API and do some stuff. Only Available in Windows for now.
+This is a simple tool used to connect <b>Linux docker host</b> with engine API and do some stuff like 
+<ul>
+  <li> Scan Docker Environment</li>
+  <li> inspect,kill,delete,pause,unpause,start,stop Containers</li>
+</ul>
+
+Only Available in Windows for now.
+<B>Dattebayo !</B>
 
 # Pre-Requisites 
 ```
