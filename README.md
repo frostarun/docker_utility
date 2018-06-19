@@ -3,6 +3,7 @@ This is a simple tool used to connect <b>Linux docker host</b> with engine API a
 <ul>
   <li> Scan Docker Environment</li>
   <li> inspect,kill,delete,pause,unpause,start,stop Containers</li>
+  <li> Search desired images in repo</li>
 </ul>
 
 Only Available in Windows for now.
