@@ -1,6 +1,7 @@
 <div>
     <B>Container ID :</B>
     <input ng-bind="containerid" type="text" style="border: none" id='containerID'>&nbsp;&nbsp;
+    <button ng-click="containerresultPeekaPoo()" style="border:none;box-shadow: 5px 5px 5px black" class="scan" style="float: right;">Hide/Show Results</button>&nbsp;&nbsp;
     <div ng-show="errorMessageBox">{{errorContent}}</div>
     <br style="clear: both;" />
     <br style="clear: both;" />
@@ -13,11 +14,37 @@
     <button ng-click="deleteDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Delete</button>&nbsp;&nbsp;
     <br style="clear: both;" />
     <br style="clear: both;" />
+
+    <B>Image Search :</B>
+    <input ng-bind="imageName" type="text" style="border: none" id='imageName' ng-model="searchfield" ng-trim="false" ng-change="searchfield = searchfield.split(' ').join('')">&nbsp;&nbsp;
+    <button ng-click="imageresultPeekaPoo()" style="border:none;box-shadow: 5px 5px 5px black" class="scan" style="float: right;">Hide/Show Results</button>&nbsp;&nbsp;
+
+    <br style="clear: both;" />
+    <br style="clear: both;" />
+
+    <button ng-click="searchDockerImage()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Search</button>&nbsp;&nbsp;
+
+
+
     <div ng-show="inspectContainerTable">
+        <br style="clear: both;" />
+        <br style="clear: both;" />
         <button id="cmd" style="border:none;box-shadow: 5px 5px 5px black" class="scan" onclick="printJS({ printable: 'container-form', type: 'html', header: 'Container Report'})">Generate Report PDF</button>
         <div id="container-form">
             <br style="clear: both;" />
             <div ng-view ng-include src="'assets/snippets/docker_mono_options_inspectTable.html'"></div>
+        </div>
+    </div>
+
+
+
+    <div ng-show="imageSearchTable">
+        <br style="clear: both;" />
+        <br style="clear: both;" />
+        <button id="cmd" style="border:none;box-shadow: 5px 5px 5px black" class="scan" onclick="printJS({ printable: 'image-form', type: 'html', header: 'Image Search Report'})">Generate Report PDF</button>
+        <div id="image-form">
+            <br style="clear: both;" />
+            <div ng-view ng-include src="'assets/snippets/docker_mono_options_imageSearch.html'"></div>
         </div>
     </div>
 </div>

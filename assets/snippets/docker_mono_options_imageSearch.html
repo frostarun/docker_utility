@@ -1,0 +1,28 @@
+<div>
+    <!-- <u>
+        <p>Docker Images : </p>
+    </u>
+    <br style="clear: both;" /> -->
+    <table>
+        <thead>
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Name</th>
+                <th>Official</th>
+                <th>IsAutomated</th>
+                <th>Star Count</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="searchedImage in imageSearch">
+                <!-- <td>{{image.Id}}</td> -->
+                <td>{{searchedImage.name}}</td>
+                <td>{{searchedImage.is_official}}</td>
+                <td>{{searchedImage.is_automated}}</td>
+                <td>{{searchedImage.star_count}}</td>
+                <td>{{searchedImage.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

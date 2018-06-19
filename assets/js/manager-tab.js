@@ -1,12 +1,4 @@
-// var myApp = angular.module('dockerUtility', []);
-// myApp.controller('mainCtrl', function ($scope) {
-//     $scope.handleOption = function () {
-//         $scope.optionTable = true;
-//     };
-// });
-
-
-function openCity(evt, cityName) {
+function selectManager(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 

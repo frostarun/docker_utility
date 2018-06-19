@@ -4,9 +4,12 @@
     <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">DOCKER MANAGER</label>
     <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification" aria-hidden="true">
       <div class="manager-tab">
-        <button class="manager-tablinks" onclick="openCity(event, 'mono-options')" ng-click="handleOption()">Fundementals</button>
+        <button class="manager-tablinks" onclick="selectManager(event, 'mono-options')" ng-click="handleOption()">Fundementals</button>
+        <button class="manager-tablinks" onclick="selectManager(event, 'bulk-options')" ng-click="handleOption()">Bulk Operations</button>
+        <button class="manager-tablinks" onclick="selectManager(event, 'swarm-options')" ng-click="handleOption()">Swarm Operations</button>
+        <!-- <button class="manager-tablinks" onclick="openCity(event, 'mono-options')" ng-click="handleOption()">Fundementals</button>
         <button class="manager-tablinks" onclick="openCity(event, 'bulk-options')" ng-click="handleOption()">Bulk Operations</button>
-        <button class="manager-tablinks" onclick="openCity(event, 'swarm-options')" ng-click="handleOption()">Swarm Operations</button>
+        <button class="manager-tablinks" onclick="openCity(event, 'swarm-options')" ng-click="handleOption()">Swarm Operations</button> -->
       </div>
       <div ng-show="optionTable">
         <div id="mono-options" class="manager-tabcontent">
