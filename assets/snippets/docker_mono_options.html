@@ -1,8 +1,8 @@
 <div>
+    <div ng-show="errorMessageBox" class="heading" ><font size="2">{{errorContent}}</font></div>
     <B>Container ID :</B>
     <input ng-bind="containerid" type="text" style="border: none" id='containerID'>&nbsp;&nbsp;
     <button ng-click="containerresultPeekaBoo()" style="border:none;box-shadow: 5px 5px 5px black" class="scan" style="float: right;">Hide/Show Results</button>&nbsp;&nbsp;
-    <div ng-show="errorMessageBox">{{errorContent}}</div>
     <br style="clear: both;" />
     <br style="clear: both;" />
     <button ng-click="inspectDockerContainer()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Inspect</button>&nbsp;&nbsp;
@@ -15,7 +15,7 @@
     <br style="clear: both;" />
     <br style="clear: both;" />
 
-    <B>Image Search :</B>
+    <B>Image ID/name :</B>
     <input ng-bind="imageName" type="text" style="border: none" id='imageName' ng-model="searchfield" ng-trim="false" ng-change="searchfield = searchfield.split(' ').join('')">&nbsp;&nbsp;
     <button ng-click="imageresultPeekaBoo()" style="border:none;box-shadow: 5px 5px 5px black" class="scan" style="float: right;">Hide/Show Results</button>&nbsp;&nbsp;
 
@@ -23,7 +23,8 @@
     <br style="clear: both;" />
 
     <button ng-click="searchDockerImage()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Search</button>&nbsp;&nbsp;
-
+    <button ng-click="pullDockerImage()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Pull</button>&nbsp;&nbsp;
+    <button ng-click="deleteDockerImage()" style="border:none;box-shadow: 5px 5px 5px black" class="scan">Delete</button>&nbsp;&nbsp;
 
 
     <div ng-show="inspectContainerTable">

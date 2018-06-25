@@ -24,6 +24,7 @@ h1 {
   float: left;
   margin: 20px 0 100px 10px;
 }
+
 h1 span {
   font-size: 13px;
   display: block;
@@ -38,15 +39,18 @@ h1 span {
   margin: 20px 5px 10px 5px;
   text-align: left;
 }
+
 .tabs li {
   float: left;
   display: block;
 }
+
 .tabs input[type="radio"] {
   position: absolute;
   top: 0;
   left: -9999px;
 }
+
 .tabs label {
   display: block;
   padding: 14px 21px;
@@ -63,9 +67,11 @@ h1 span {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
 .tabs label:hover {
   background: #703688;
 }
+
 .tabs .tab-content {
   z-index: 2;
   display: none;
@@ -79,12 +85,14 @@ h1 span {
   left: 0;
   background: #612e76;
 }
-.tabs [id^="tab"]:checked + label {
+
+.tabs [id^="tab"]:checked+label {
   top: 0;
   padding-top: 17px;
   background: #612e76;
 }
-.tabs [id^="tab"]:checked ~ [id^="tab-content"] {
+
+.tabs [id^="tab"]:checked~[id^="tab-content"] {
   display: block;
 }
 
@@ -120,6 +128,11 @@ p.link a:hover {
   background-color: #522764;
 }
 
+p.heading {
+  background-color: #250731;
+  color: white;
+}
+
 input[type=text] {
   background-color: #522764;
   color: white;
@@ -137,11 +150,9 @@ table {
   width: 100%;
 }
 
-th, td {
+th,
+td {
   padding: 2px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-
-
-

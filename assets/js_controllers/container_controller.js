@@ -83,13 +83,13 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
             $scope.inspectContainerTable = true;
             $scope.inspectContainer = response.data;
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -123,14 +123,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -163,14 +163,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -204,14 +204,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -245,14 +245,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -286,14 +286,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
@@ -326,14 +326,14 @@ myApp.containerController = function ($scope, $http, cfpLoadingBar, $timeout) {
         then(function (response) {
             $scope.complete();
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
         }, function (response) {
             console.log(response.status);
             $scope.errorMessageBox = true;
-            $scope.errorContent = response.status;
+            $scope.errorContent = response.status +":"+response.statusText;
             $timeout(function () {
                 $scope.errorMessageBox = false;
             }, 2000);
